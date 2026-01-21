@@ -30,7 +30,7 @@ export function BlogDetailPage() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between gap-3">
-        <Button asChild variant="outline" size="sm">
+        <Button asChild variant="outline" size="sm" className="rounded-full">
           <Link to="/">Back</Link>
         </Button>
       </div>
@@ -60,12 +60,12 @@ export function BlogDetailPage() {
             const blog = blogQuery.data
             return (
               <>
-          <div className="overflow-hidden rounded-xl border bg-card">
+          <div className="overflow-hidden rounded-2xl border bg-card shadow-soft">
             <div className="relative">
               <img
                 src={blog.coverImage}
                 alt={blog.title}
-                className="h-56 w-full object-cover"
+                className="h-52 w-full object-cover sm:h-60 md:h-72"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
@@ -89,7 +89,7 @@ export function BlogDetailPage() {
             </div>
           </div>
 
-          <Card>
+          <Card className="rounded-2xl border bg-card/90 shadow-soft">
             <CardHeader>
               <div className="flex flex-wrap items-center gap-2">
                 {blog.category.slice(0, 3).map((c) => (

@@ -51,15 +51,17 @@ export function NewBlogPage() {
   return (
     <div className="mx-auto max-w-2xl pb-10">
       <div className="mb-4 flex items-center justify-between gap-3">
-        <Button asChild variant="outline" size="sm">
+        <Button asChild variant="outline" size="sm" className="rounded-full">
           <Link to="/">Back</Link>
         </Button>
       </div>
 
-      <Card>
+      <Card className="rounded-2xl border bg-card/90 shadow-soft">
         <CardHeader>
           <CardTitle>Create a new blog</CardTitle>
-          <CardDescription>Use plain text for content (no HTML needed).</CardDescription>
+          <CardDescription>
+            Share your perspective in plain text — no HTML formatting required.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={onSubmit} className="space-y-4">
